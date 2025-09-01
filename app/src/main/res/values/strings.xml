@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Student Information Portal</string>
+    <string name="welcome_title">Student Information Portal</string>
+    <string name="welcome_subtitle">Please provide your details to continue\nAll fields are required for verification</string>
+    <string name="name_hint">Enter your full name</string>
+    <string name="student_number_hint">Enter your 11-digit student number</string>
+    <string name="submit_button_text">VERIFY &amp; SUBMIT</string>
+    <string name="name_display_prefix">Student Name: </string>
+    <string name="student_number_display_prefix">Student ID: </string>
+    <string name="name_empty_error">Please enter your name</string>
+    <string name="student_number_empty_error">Student number is required</string>
+    <string name="student_number_length_error">Student number must be exactly 11 digits</string>
+    <string name="submission_success">✓ Information verified successfully!</string>
+    <string name="input_instructions">Ensure all information is accurate</string>
+    <string name="required_field">* Required field</string>
+</resources>
