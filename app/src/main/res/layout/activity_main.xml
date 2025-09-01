@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="@drawable/bg_gradient"
+    android:background="@color/gray_100"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -20,25 +20,25 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="24dp">
 
             <TextView
                 android:id="@+id/title_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/welcome_title"
-                android:textSize="24sp"
+                android:text="Student Information Portal"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="@color/primary"
+                android:textColor="@color/purple_500"
                 android:gravity="center"
-                android:layout_marginBottom="6dp" />
+                android:layout_marginBottom="8dp" />
 
             <TextView
                 android:id="@+id/subtitle_text_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/welcome_subtitle"
-                android:textSize="14sp"
+                android:text="Please provide your details to continue\nAll fields are required for verification"
+                android:textSize="13sp"
                 android:textColor="@color/gray_600"
                 android:gravity="center"
                 android:lineSpacingExtra="2sp" />
@@ -48,65 +48,68 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardElevation="3dp"
-            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="16dp"
             app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="18dp">
+                android:padding="20dp">
 
                 <!-- Display Area -->
                 <TextView
                     android:id="@+id/display_text_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/input_instructions"
+                    android:text="Ensure all information is accurate"
                     android:textSize="14sp"
                     android:textColor="@color/gray_700"
                     android:gravity="center"
                     android:textStyle="italic"
-                    android:layout_marginBottom="16dp"
-                    android:padding="12dp"
-                    android:background="@drawable/bg_display" />
+                    android:layout_marginBottom="20dp"
+                    android:padding="16dp"
+                    android:background="@color/gray_100"
+                    android:minHeight="60dp" />
 
                 <!-- Name Input -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginBottom="14dp">
+                    android:layout_marginBottom="16dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/name_hint"
+                        android:text="Full Name"
                         android:textColor="@color/gray_700"
-                        android:textSize="13sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
-                        android:layout_marginBottom="5dp" />
+                        android:layout_marginBottom="6dp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/name_input_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:boxBackgroundMode="outline"
-                        app:boxCornerRadius="8dp"
-                        app:boxStrokeColor="@color/primary"
+                        app:boxStrokeColor="@color/purple_500"
                         app:boxStrokeWidth="1.5dp"
-                        app:hintTextColor="@color/primary">
+                        app:hintTextColor="@color/gray_500"
+                        android:layout_marginBottom="4dp">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/name_input_edit_text"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
+                            android:layout_height="52dp"
                             android:inputType="textCapWords"
                             android:imeOptions="actionNext"
                             android:textColor="@color/gray_800"
-                            android:textSize="15sp"
-                            android:paddingHorizontal="12dp" />
+                            android:textSize="16sp"
+                            android:paddingHorizontal="16dp"
+                            android:hint="Enter your full name"
+                            android:textColorHint="@color/gray_500" />
 
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
@@ -116,46 +119,48 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginBottom="18dp">
+                    android:layout_marginBottom="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/student_number_hint"
+                        android:text="Student Number"
                         android:textColor="@color/gray_700"
-                        android:textSize="13sp"
+                        android:textSize="14sp"
                         android:textStyle="bold"
-                        android:layout_marginBottom="5dp" />
+                        android:layout_marginBottom="6dp" />
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/student_number_input_layout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:boxBackgroundMode="outline"
-                        app:boxCornerRadius="8dp"
-                        app:boxStrokeColor="@color/primary"
+                        app:boxStrokeColor="@color/purple_500"
                         app:boxStrokeWidth="1.5dp"
-                        app:hintTextColor="@color/primary">
+                        app:hintTextColor="@color/gray_500"
+                        android:layout_marginBottom="4dp">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/student_number_input_edit_text"
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
+                            android:layout_height="52dp"
                             android:inputType="number"
                             android:maxLength="11"
                             android:imeOptions="actionDone"
                             android:textColor="@color/gray_800"
-                            android:textSize="15sp"
-                            android:paddingHorizontal="12dp" />
+                            android:textSize="16sp"
+                            android:paddingHorizontal="16dp"
+                            android:hint="Enter 11-digit student number"
+                            android:textColorHint="@color/gray_500" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/required_field"
+                        android:text="* Required field"
                         android:textColor="@color/gray_500"
-                        android:textSize="11sp"
+                        android:textSize="12sp"
                         android:layout_marginTop="4dp" />
                 </LinearLayout>
 
@@ -163,12 +168,12 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/submit_button"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:text="@string/submit_button_text"
-                    android:textSize="15sp"
+                    android:layout_height="54dp"
+                    android:text="VERIFY &amp; SUBMIT"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    app:backgroundTint="@color/primary"
-                    app:cornerRadius="8dp"
+                    app:backgroundTint="@color/purple_500"
+                    app:cornerRadius="12dp"
                     android:textColor="@color/white"
                     app:elevation="2dp" />
 
@@ -183,7 +188,7 @@
             android:textColor="@color/gray_400"
             android:textSize="11sp"
             android:layout_gravity="center"
-            android:layout_marginTop="14dp" />
+            android:layout_marginTop="16dp" />
 
     </LinearLayout>
 </ScrollView>
